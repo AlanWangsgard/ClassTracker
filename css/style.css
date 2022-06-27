@@ -1,0 +1,48 @@
+/* 
+colors:
+green: #379634
+gray: #8C8A93
+lightgray
+yellow: #EAD637
+
+*/
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #379634;
+}
+
+nav {
+    background-color: lightgray;
+}
+
+li {
+    background-color: #EAD637;
+}
+
+main {
+    background-color: #8C8A93;
+    text-align: center;
+    border-radius: 10px;
+}
+
+main img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+main p {
+    background-color: orange;
+}
+
+h1 {
+    background-color: purple;
+}
+
+footer {
+    background-color: #379634;
+}
