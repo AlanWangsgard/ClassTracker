@@ -1,0 +1,23 @@
+{
+    "name": "classtracker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "snowpack dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlanWangsgard/ClassTracker.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AlanWangsgard/ClassTracker/issues"
+    },
+    "homepage": "https://github.com/AlanWangsgard/ClassTracker#readme",
+    "dependencies": {
+        "snowpack": "^3.8.8"
+    }
+}
