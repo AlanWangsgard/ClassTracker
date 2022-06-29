@@ -9,22 +9,22 @@ yellow: #EAD637
 
 body {
     font-family: 'Times New Roman', Times, serif;
+    background-color: #42464F;
 }
 
 header {
     background-color: #379634;
+    border-radius: 20px;
 }
 
+
+/* 
 nav {
     background-color: lightgray;
-}
-
-li {
-    background-color: #EAD637;
-}
+} */
 
 main {
-    background-color: #8C8A93;
+    /* background-color: #8C8A93; */
     text-align: center;
     border-radius: 10px;
 }
@@ -35,14 +35,28 @@ main img {
     border-radius: 50%;
 }
 
-main p {
-    background-color: orange;
+footer {
+    background-color: #379634;
 }
 
-h1 {
-    background-color: purple;
+li {
+    display: inline;
+}
+
+.hero {
+    background-color: gray;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 3%;
+    box-shadow: 3px 3px 3px black;
+}
+
+.hero p {
+    margin: 15px;
+    text-align: justify;
 }
 
 footer {
-    background-color: #379634;
+    text-align: center;
+    border-radius: 20px;
 }
