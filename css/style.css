@@ -93,3 +93,35 @@ nav {
     border-bottom: 3px solid #42464F;
     ;
 }
+
+/* login screen */
+
+.loginForm {
+    text-align: left;
+}
+
+.loginForm input {
+    margin-bottom: 1em;
+}
+
+button {
+    margin-bottom: 1em;
+}
+
+p a:visited {
+    color: white;
+}
+
+p a:hover {
+    color: yellow;
+}
+
+/* registration */
+
+.registrationForm {
+    text-align: left;
+}
+
+.registrationForm input {
+    margin-bottom: 1em;
+}
