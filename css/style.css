@@ -93,3 +93,83 @@ nav {
     border-bottom: 3px solid #42464F;
     ;
 }
+
+/* login screen */
+
+.loginForm {
+    text-align: left;
+}
+
+.loginForm input {
+    margin-bottom: 1em;
+}
+
+button {
+    margin-bottom: 1em;
+}
+
+p a:visited {
+    color: white;
+}
+
+p a:hover {
+    color: yellow;
+}
+
+/* registration */
+
+.registrationForm {
+    text-align: left;
+}
+
+.registrationForm input {
+    margin-bottom: 1em;
+}
+
+/*schools page*/
+section.school-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.school-header button {
+    width: 15em;
+    height: 2.5em;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+div.school-info {
+    background-color: darkblue;
+    border-radius: 20px;
+}
+
+div.school-info p {
+    padding-bottom: 1.5em;
+}
+
+
+/*course page */
+
+section.course-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.course-header button {
+    width: 15em;
+    height: 2.5em;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+div.course-info {
+    background-color: darkblue;
+    border-radius: 20px;
+}
+
+div.course-info p {
+    padding-bottom: 1.5em;
+}
