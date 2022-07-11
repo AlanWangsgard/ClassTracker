@@ -1,9 +1,21 @@
-const data = fetch("https://course-tracker-byu.herokuapp.com/schools/", {
-    headers: {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*"
-    }
-})
+async function getschools() {
+    const data = await fetch("https://course-tracker-byu.herokuapp.com/schools/").then(res => res.json())
+    return data
+}
+
+async function main() {
+    const data = await getschools()
+    console.log(data)
+    const main = document.querySelector("main")
 
 
-// console.log(data)
+    data.forEach(element => {
+        var p = document.createElement("p")
+        p.textContent = element._id
+        main.append(p)
+
+    });
+
+}
+
+main()
