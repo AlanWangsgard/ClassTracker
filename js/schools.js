@@ -24,7 +24,26 @@ async function main() {
         main.innerHTML += template
 
     });
+    document.querySelector(".add").addEventListener("click", function() { addSchool() })
 
 }
+
+async function addSchool() {
+    const options = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "name": "Brigham Young University - TestPost",
+            "ID": "12",
+            "city": "Clearlake",
+            "state": "California",
+            "description": "This is an example description...."
+        })
+    }
+    return await fetch("https://course-tracker-byu.herokuapp.com/schools/" + options).then(res => res.json())
+}
+
 
 main()
