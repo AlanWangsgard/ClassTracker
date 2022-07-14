@@ -1,4 +1,4 @@
-async function getschools() {
+async function getCourses() {
     const data = await fetch("https://course-tracker-byu.herokuapp.com/courses/valid").then(res => res.json())
     return data
 }
@@ -12,7 +12,7 @@ function getParam(param) {
 async function main() {
     const school = getParam("schoolName")
     console.log(school)
-    const data = await getschools()
+    const data = await getCourses()
     console.log(data)
     const main = document.querySelector("main")
 
