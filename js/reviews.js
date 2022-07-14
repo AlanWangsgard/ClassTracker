@@ -1,84 +1,40 @@
-async function addreview() {
-    const options = {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "code": "WDD330",
-            "school": "Brigham Young University - Idaho",
-            "grade": "95",
-            "tags": [
-                "Helpful",
-                "Challenging",
-                "Amazing content"
-            ],
-            "review": "This is an example review...."
-        })
-    }
-    return await fetch("https://course-tracker-byu.herokuapp.com/schools/" + options).then(res => res.json())
-}
-
 function getParam(param) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     return urlParams.get(param);
 }
 
-async function getschools() {
-    const data = await fetch("https://course-tracker-byu.herokuapp.com/schools/").then(res => res.json())
+async function getreviews() {
+    const data = await fetch("https://course-tracker-byu.herokuapp.com/reviews/valid").then(res => res.json())
     return data
 }
 
-function formDataToJSON(formElement) {
-    let formData = new FormData(formElement);
-
-    const converted = Object.fromEntries(formData.entries());
-
-    return converted;
-}
-
 async function main() {
-    const data = await getschools()
+    const a = document.createElement("a")
+    const data = await getreviews()
+    const code = getParam("code")
     console.log(data)
-    const select = document.createElement("select")
+    a.href = "addReview.html?code=" + code
+    a.innerText = "Review"
+    const main = document.querySelector("main")
+    const div = document.querySelector(".addReview")
+    var number = 0
     data.forEach(element => {
-        const option = document.createElement("option")
-        option.innerText = element.name
-        option.value = element.name
-        select.append(option)
-
+        if (element.course_code == code) {
+            var p = document.createElement("p")
+            p.textContent = element.review + " " + element.grade
+            main.append(p)
+            number += 1
+        } else {
+            console.log(number)
+        }
     });
-    document.querySelector(".courseForm").append(select)
-        // document.querySelector(".addreview").addEventListener("click", function() { location.assign("result.html") })
-
-    document.querySelector(".addreview").addEventListener("click", function() { addreview() })
-    document.querySelector(".courseCode").value = getParam("code")
-
+    if (number < 1) {
+        var p = document.createElement("p")
+        p.textContent = "There are no reviews for this course, be the first!"
+        main.append(p)
+    }
+    div.append(a)
 
 }
-async function addreview() {
-    const form = document.querySelector("form")
-    const json = formDataToJSON(form);
-    json.school = document.querySelector("select").value
-    console.log(json)
-        // const options = {
-        //     method: "POST",
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         "name": "Brigham Young University - TestPost",
-        //         "ID": "12",
-        //         "city": "Clearlake",
-        //         "state": "California",
-        //         "description": "This is an example description...."
-        //     })
-        // }
-        // return await fetch("https://course-tracker-byu.herokuapp.com/schools/" + options).then(res => res.json())
-}
-
-
-// document.querySelector(".addCourse").addEventListener("click", function() { addCourse() })
-
 main()

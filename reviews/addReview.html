@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
-    <script src="../js/reviews.js"></script>
+    <script src="../js/addReview.js"></script>
 </head>
 <header>
     <h1>Class-Ifieds</h1>
@@ -36,7 +36,19 @@
 
 <body>
     <main>
-        <div class="addReview"></div>
+        <form>
+            <div class="courseForm">
+                <label for="code">Course Code</label><br>
+                <input class="courseCode" readonly name="code"><br>
+                <label for="grade">Grade</label><br>
+                <input name="grade"><br>
+                <label for="tags">tags</label><br>
+                <input name="tags"><br>
+                <label for="review">review</label><br>
+                <input name="review"><br>
+            </div>
+            <input class="addreview" value="Add" type="button">
+        </form>
     </main>
     <footer>
         <p>Class-Ifides Tm 6/27/2022</p>
