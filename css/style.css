@@ -133,7 +133,7 @@ p a:hover {
 
 section.school-header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 25% 25%;
 }
 
 section.school-header button {
@@ -144,6 +144,20 @@ section.school-header button {
     margin-bottom: 0;
 }
 
+section.school-header button a {
+    color: black;
+    text-decoration: none;
+}
+
+section.school-header button a:visited {
+    color: black;
+}
+
+section.school-header button:hover {
+    color: blue;
+    cursor: pointer;
+}
+
 div.school-info {
     background-color: darkblue;
     border-radius: 20px;
@@ -152,6 +166,31 @@ div.school-info {
 div.school-info p {
     padding-bottom: 1.5em;
 }
+
+
+.button {
+    width: 10em;
+    height: 2em;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+a.button {
+    color: black;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: black;
+}
+
+a.button:hover {
+    color: purple;
+    background-color: gray;
+}
+
 
 
 /*course page */
