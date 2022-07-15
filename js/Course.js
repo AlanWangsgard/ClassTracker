@@ -1,6 +1,10 @@
 import { formDataToJSON, getParam } from "./utils.js"
 
 export default class Course {
+    async getSchools() {
+        const data = await fetch("https://course-tracker-byu.herokuapp.com/schools/").then(res => res.json())
+        return data
+    }
 
     async getCourses() {
         const data = await fetch("https://course-tracker-byu.herokuapp.com/courses/valid").then(res => res.json())
@@ -9,7 +13,7 @@ export default class Course {
 
 
     async init() {
-        const data = await this.getCourses()
+        const data = await this.getSchools()
         console.log(data)
         const select = document.createElement("select")
         data.forEach(element => {
