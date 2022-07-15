@@ -94,6 +94,7 @@ nav {
     ;
 }
 
+
 /* login screen */
 
 .loginForm {
@@ -116,6 +117,7 @@ p a:hover {
     color: yellow;
 }
 
+
 /* registration */
 
 .registrationForm {
@@ -126,7 +128,9 @@ p a:hover {
     margin-bottom: 1em;
 }
 
+
 /*schools page*/
+
 section.school-header {
     display: grid;
     grid-template-columns: 50% 25% 25%;
@@ -211,4 +215,21 @@ div.course-info {
 
 div.course-info p {
     padding-bottom: 1.5em;
+}
+
+.addReview a {
+    color: white;
+    text-decoration: none;
+    background: crimson;
+    padding: 10px;
+}
+
+.addReview a:hover {
+    color: lightblue;
+    text-decoration: underline;
+    border: 1px solid lightblue;
+}
+
+.addReview {
+    margin: 15px;
 }

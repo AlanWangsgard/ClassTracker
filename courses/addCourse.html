@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Courses</title>
-    <script src="../js/courses.js"></script>
+    <script type="module" src="../js/addCourse.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                     <a href="https://course-tracker-byu.herokuapp.com/login">Login</a>
                 </li>
                 <li>
-                    <a href="courses/addCourse.html">Add Course</a>
+                    <a href="addCourse.html">Add Course</a>
                 </li>
                 <li>
                     <a href="../schools/addSchool.html">Add School</a>
@@ -35,23 +35,22 @@
         </nav>
     </header>
     <main>
-        <h2>Courses</h2>
-        <!-- <div class="course-info">
-            <section class="course-header">
-                <h3><span class="course-title">WFFL 101 - Introduction to Waffles </span></h3>
-                <button>More Info</button>
-            </section>
-            <hr>
-            <p><span class="course-description">This is a description of the course</span></p>
-        </div>
-        <div class="course-info">
-            <section class="course-header">
-                <h3><span class="course-title">WFFL 102 - History of Waffles </span></h3>
-                <button>More Info</button>
-            </section>
-            <hr>
-            <p><span class="course-description">This is a description of the course</span></p>
-        </div> -->
+        <h2>Add Course</h2>
+        <form>
+            <div class="courseForm">
+                <label for="code">Course Code</label><br>
+                <input name="code"><br>
+                <label for="department">Department</label><br>
+                <input name="department"><br>
+                <label for="name">Name</label><br>
+                <input name="name"><br>
+                <label for="description">Description</label><br>
+                <input name="description"><br>
+                <label for="credits">Credits</label><br>
+                <input name="credits"><br>
+            </div>
+            <input class="addCourse" value="Add" type="button">
+        </form>
     </main>
 </body>
 <footer>

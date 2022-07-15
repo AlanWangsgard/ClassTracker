@@ -1,4 +1,4 @@
-async function getschools() {
+async function getCourses() {
     const data = await fetch("https://course-tracker-byu.herokuapp.com/courses/valid").then(res => res.json())
     return data
 }
@@ -12,7 +12,7 @@ function getParam(param) {
 async function main() {
     const school = getParam("schoolName")
     console.log(school)
-    const data = await getschools()
+    const data = await getCourses()
     console.log(data)
     const main = document.querySelector("main")
 
@@ -24,7 +24,7 @@ async function main() {
             var template = `<div class="school-info">
             <section class="school-header">
                 <h3><span class="school-title">"${element.name}"</span></h3>
-                <button>More Info</button>
+                <button>More Info</button><span class="reviewButton"><a href="../reviews/index.html?code=${element.code}"><input type="button" value="Review"></a></span>
             </section>
             <hr>
             <p><span class="school-description">"${element.description}"</span></p>
@@ -32,7 +32,12 @@ async function main() {
             main.innerHTML += template
         }
     });
+    // document.querySelectorAll(".reviewButton").forEach(element => {
+    // addEventListener("click", function() { location.assign("../reviews/index.html?code=" + element.querySelector(".courseCode").value) })
+    // });
+
 
 }
+
 
 main()

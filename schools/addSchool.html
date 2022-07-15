@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/schools.js"></script>
-    <title>Schools</title>
+    <title>Courses</title>
+    <script type="module" src="../js/addSchool.js"></script>
 </head>
 
 <body>
@@ -31,12 +31,24 @@
                     <a href="addSchool.html">Add School</a>
                 </li>
 
-
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Schools</h2>
+        <h2>Add School</h2>
+        <form>
+            <div class="schoolForm">
+                <label for="name">Name</label><br>
+                <input name="name"><br>
+                <label for="city">City</label><br>
+                <input name="city"><br>
+                <label for="state">State</label><br>
+                <input name="state"><br>
+                <label for="description">Description</label><br>
+                <input name="description"><br>
+            </div>
+            <input class="addSchool" value="Add" type="button">
+        </form>
     </main>
 </body>
 <footer>
