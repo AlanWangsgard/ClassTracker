@@ -35,7 +35,7 @@ export default class review {
         a.href = "addReview.html?code=" + code
         a.innerText = "Review"
         const main = document.querySelector("main")
-        const div = document.querySelector(".addReview")
+        const div = document.querySelector(".mainButton")
         var number = 0
         data.forEach(element => {
             if (element.course_code == code) {

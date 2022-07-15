@@ -167,7 +167,6 @@ div.school-info p {
     padding-bottom: 1.5em;
 }
 
-
 .button {
     width: 10em;
     height: 2em;
@@ -190,7 +189,6 @@ a.button:hover {
     color: purple;
     background-color: gray;
 }
-
 
 
 /*course page */
@@ -217,19 +215,19 @@ div.course-info p {
     padding-bottom: 1.5em;
 }
 
-.addReview a {
+.mainButton a {
     color: white;
     text-decoration: none;
     background: crimson;
     padding: 10px;
 }
 
-.addReview a:hover {
+.mainButton a:hover {
     color: lightblue;
     text-decoration: underline;
     border: 1px solid lightblue;
 }
 
-.addReview {
+.mainButton {
     margin: 15px;
 }
