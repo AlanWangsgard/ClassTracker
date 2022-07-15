@@ -50,7 +50,7 @@ async function main() {
 
     });
     document.querySelector(".courseForm").append(select)
-        // document.querySelector(".addreview").addEventListener("click", function() { location.assign("result.html") })
+    document.querySelector(".addreview").addEventListener("click", function() { location.assign("../reviews/result.html") })
 
     document.querySelector(".addreview").addEventListener("click", function() { addreview() })
     document.querySelector(".courseCode").value = getParam("code")
