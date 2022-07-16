@@ -226,8 +226,53 @@ div.course-info p {
     color: lightblue;
     text-decoration: underline;
     border: 1px solid lightblue;
+    animation-name: orangeb;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .mainButton {
     margin: 15px;
+}
+
+@keyframes orangeb {
+    50% {
+        background-color: orange;
+    }
+}
+
+.added {
+    animation-name: celebrate;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes celebrate {
+    /* 20% {
+        transform: translateX(-20px);
+    }
+    40% {
+        transform: translateY(20px);
+    }
+    60% {
+        transform: translateX(20px);
+    }
+    80% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    } */
+    20% {
+        transform: translateX(20px) translateY(20px);
+    }
+    40% {
+        transform: translateX(20px) translateY(-20px);
+    }
+    60% {
+        transform: translateX(-20px) translateY(-20px);
+    }
+    80% {
+        transform: translateX(-20px) translateY(20px);
+    }
 }
