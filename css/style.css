@@ -133,7 +133,7 @@ p a:hover {
 
 section.school-header {
     display: grid;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 50% 50%;
 }
 
 section.school-header button {
@@ -142,11 +142,17 @@ section.school-header button {
     justify-self: center;
     align-self: center;
     margin-bottom: 0;
+
 }
 
 section.school-header button a {
     color: black;
     text-decoration: none;
+    text-align: left;
+}
+
+.button {
+    padding-top: 0.5em;
 }
 
 section.school-header button a:visited {
@@ -245,6 +251,12 @@ div.course-info p {
     animation-name: celebrate;
     animation-iteration-count: infinite;
     animation-duration: 4s;
+}
+
+span.reviewButton a input {
+    margin-top: 1.5em;
+    height: 2em;
+    width: 15em;
 }
 
 @keyframes celebrate {
