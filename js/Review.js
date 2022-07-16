@@ -4,12 +4,17 @@ import { getParam, formDataToJSON } from "./utils.js"
 export default class review {
 
     async getReview() {
+        const data = await fetch("https://course-tracker-byu.herokuapp.com/reviews/valid/").then(res => res.json())
+        return data
+    }
+
+    async getSchool() {
         const data = await fetch("https://course-tracker-byu.herokuapp.com/schools/").then(res => res.json())
         return data
     }
 
     async init() {
-        const data = await this.getReview()
+        const data = await this.getSchool()
         console.log(data)
         const select = document.createElement("select")
         data.forEach(element => {
@@ -36,15 +41,24 @@ export default class review {
         a.innerText = "Review"
         const main = document.querySelector("main")
         const div = document.querySelector(".mainButton")
+        div.append(a)
         var number = 0
         data.forEach(element => {
             if (element.course_code == code) {
-                var p = document.createElement("p")
-                p.textContent = element.review + " " + element.grade
-                main.append(p)
+                // var p = document.createElement("p")
+                // p.textContent = element.review + " " + element.grade
+                // main.append(p)
                 number += 1
-            } else {
-                console.log(number)
+                    // p.textContent = element._id + " " + element.name + " " + element.description
+                var template = `<div class="school-info">
+            <section class="school-header">
+                <h3><span class="school-title">${element.course_code} Grade: ${element.grade}</span></h3>
+            </section>
+            <hr>
+            <p><span class="school-description">"${element.review}"</span></p>
+        </div>`;
+                main.innerHTML += template
+
             }
         });
         if (number < 1) {
@@ -52,7 +66,7 @@ export default class review {
             p.textContent = "There are no reviews for this course, be the first!"
             main.append(p)
         }
-        div.append(a)
+
 
     }
     async addreview() {
