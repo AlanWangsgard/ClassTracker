@@ -19,7 +19,6 @@
              var template = `<div class="school-info">
             <section class="school-header">
                 <h3><span class="school-title">"${element.name}"</span></h3>
-                <button>More Info</button>
                 <a class="button" href="../courses/index.html?schoolName=${element.name}">Courses</a>
             </section>
             <hr>

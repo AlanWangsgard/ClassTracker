@@ -44,7 +44,7 @@ export default class Course {
                 var template = `<div class="school-info">
             <section class="school-header">
                 <h3><span class="school-title">"${element.name}"</span></h3>
-                <button>More Info</button><span class="reviewButton"><a href="../reviews/index.html?code=${element.code}"><input type="button" value="Review"></a></span>
+                <span class="reviewButton"><a href="../reviews/index.html?code=${element.code}"><input type="button" value="Review"></a></span>
             </section>
             <hr>
             <p><span class="school-description">"${element.description}"</span></p>
