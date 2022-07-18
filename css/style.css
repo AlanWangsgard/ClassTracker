@@ -259,6 +259,10 @@ span.reviewButton a input {
     width: 15em;
 }
 
+img.logo {
+    max-width: 15%;
+}
+
 @keyframes celebrate {
     /* 20% {
         transform: translateX(-20px);
